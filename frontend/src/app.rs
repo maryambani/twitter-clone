@@ -4,7 +4,7 @@ use dioxus::prelude::*;
 use dioxus_router::{Router, Route};
 use fermi::use_init_atom_root;
 
-use crate::prelude::*;
+use crate::{prelude::*, elements::Navbar};
 
 pub fn App(cx: Scope) -> Element {
     use_init_atom_root(cx);
@@ -13,6 +13,6 @@ pub fn App(cx: Scope) -> Element {
             Route { to: page::ACCOUNT_REGISTER, page::Register {} },
             Route { to: page::ACCOUNT_LOGIN, page::Login {} },
             Route { to: page::HOME, page::Home {} },
-        }
+            Navbar {}        }
     })
 }
