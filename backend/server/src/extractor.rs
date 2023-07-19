@@ -2,7 +2,7 @@ use axum::{
     extract::FromRequestParts, Extension, async_trait , http::request::Parts, RequestPartsExt
 };
 
-use hyper::{StatusCode};
+use hyper::StatusCode;
 use uchat_query::OwnedAsyncConnection;
 
 use crate::AppState;
