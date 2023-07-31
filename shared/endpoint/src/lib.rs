@@ -23,6 +23,8 @@ pub struct RequestFailed {
     pub msg: String,
 }
 
-route!("/post/new" => post::endpoint::NewPost);
 route!("/account/create" => user::endpoint::CreateUser);
 route!("/account/login" => user::endpoint::Login);
+
+route!("/post/new" => post::endpoint::NewPost);
+route!("/posts/trending" => post::endpoint::TrendingPosts);
